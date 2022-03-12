@@ -13,15 +13,16 @@ app.get('/user', (req,res) =>{
 })
 
 app.get('/produtos', (req,res) =>{
-    let produtos = [{
-        'produto':'Notbook','preco':'R$6000',
-        'produto':'Celular','preco':'R$2000',
-        'produto':'Computador','preco':'R$8000',
-        'produto':'TV smart','preco':'R$5500',
-        'produto':'Whatch','preco':'R$800',
-        'produto':'Fone sem fio','preco':'R$2000',
-        'produto':'Tablet','preco':'R$3000',
-    }]
+    let produtos = {
+        "produto":"Notbook","preco":"R$6000",
+        "produto":"Notbook2","preco":"R$6000",
+        "produto":"Notbook3","preco":"R$6000",
+        "produto":"Notbook4","preco":"R$6000",
+        "produto":"Notbook5","preco":"R$6000",
+        "produto":"Notbook6","preco":"R$6000",
+        "produto":"Notbook7","preco":"R$6000",
+        
+    }
 
     return (
         res.json({"produtos": produtos})
