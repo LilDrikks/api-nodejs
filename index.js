@@ -11,7 +11,7 @@ app.get('/user', (req,res) =>{
         {nome:'rodrigo',idade:23}
     )
 })
-
+//ssh -i "pairkayaws.pem" ubuntu@ec2-15-228-185-140.sa-east-1.compute.amazonaws.com
 app.get('/produtos', (req,res) =>{
     let produtos = {
         "1":{"Notbook":"Notbook","preco":"R$6000"},
