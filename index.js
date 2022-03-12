@@ -13,7 +13,7 @@ app.get('/user', (req,res) =>{
 })
 
 app.get('/produtos', (req,res) =>{
-    const produtos = {
+    let produtos = [{
         'produto':'Notbook','preco':'R$6000',
         'produto':'Celular','preco':'R$2000',
         'produto':'Computador','preco':'R$8000',
@@ -21,10 +21,10 @@ app.get('/produtos', (req,res) =>{
         'produto':'Whatch','preco':'R$800',
         'produto':'Fone sem fio','preco':'R$2000',
         'produto':'Tablet','preco':'R$3000',
-    }
+    }]
 
     return (
-        res.json({produtos: produtos})
+        res.json({"produtos": produtos})
     )
 })
 
