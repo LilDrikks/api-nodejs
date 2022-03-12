@@ -14,7 +14,7 @@ app.get('/user', (req,res) =>{
 
 app.get('/produtos', (req,res) =>{
     let produtos = {
-        "1":"Notbook","preco":"R$6000",
+        "1":{"Notbook":"Notbook","preco":"R$6000"},
         "2":"Notbook2","preco":"R$6000",
         "3":"Notbook3","preco":"R$6000",
         "4":"Notbook4","preco":"R$6000",
