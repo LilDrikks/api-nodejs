@@ -1,8 +1,10 @@
 const express = require('express')
 const { default: mongoose } = require('mongoose')
 const app = express()
-
 const Person = require('./models/Person')
+
+const cors = require('cors')
+app.use(cors())
 
 //forma de ler json / middlewares
 app.use(
@@ -11,11 +13,11 @@ app.use(
     })
 )
 app.use(express.json())
-
 //importando rotas do router express
 const personRoutes = require('./routes/personRoutes')
 app.use('/person', personRoutes)
 
+/*
 app.use((req, res ,next) => {
     res.header('Acces-Control-Allow-Origin', '*')
     res.header(
@@ -30,6 +32,7 @@ app.use((req, res ,next) => {
     }
     next()
 })
+*/
 
 //rota inicial / endpoint
 app.get('/', (req,res) =>{
