@@ -16,6 +16,21 @@ app.use(express.json())
 const personRoutes = require('./routes/personRoutes')
 app.use('/person', personRoutes)
 
+app.use((req, res ,next) => {
+    res.header('Acces-Control-Allow-Origin', '*')
+    res.header(
+        'Acces-Control-Allow-Header',
+        'Origin, X-Requested-With, Content-Type, Accept, Authorization'
+    )
+
+    if(req.method === 'OPTIONS'){
+        res.header('Acces-Control-Allow-Method',
+         'PUT, POST, PATCH, DELETE, GET')
+        return res.status(200).send({})
+    }
+    next()
+})
+
 //rota inicial / endpoint
 app.get('/', (req,res) =>{
     return res.json({message: 'server is up'})
