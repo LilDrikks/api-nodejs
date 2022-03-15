@@ -41,6 +41,7 @@ router.get('/user/:id', async (req, res) => {
 
     try{
         const person = await Person.findOne({_id: id})
+        if(person === null) return res.status(422).json({message: 'usuario nao existe'})
         res.status(200).json(person)     
     }
     catch(erro){
@@ -61,7 +62,7 @@ router.patch('/update/:id', async (req, res) => {
         approved,
     }
     try {
-        await Person.updateOne({_id:id},person)
+        await Person.updateOne({_id:id}, person)
         res.status(200).json({sucess: 'sucesso'})
     }
     catch(erro){
