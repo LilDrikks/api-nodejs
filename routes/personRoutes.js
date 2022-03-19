@@ -4,7 +4,6 @@ const User = require('../models/User')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 
-<<<<<<< HEAD
 //rota da apii
 router.post('/', async (req, res)=>{
     // req.body
@@ -89,8 +88,6 @@ router.delete('/delete/:id', async (req, res) => {
 
 
 
-=======
->>>>>>> dbf60be9f7e51e316e418f8377435057fe590717
 //////////////////////////////////////////////////////
 //Rotas do segundo projeto
 
