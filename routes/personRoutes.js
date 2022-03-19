@@ -4,7 +4,7 @@ const User = require('../models/User')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 
-//rota da api
+//rota da apii
 router.post('/', async (req, res)=>{
     // req.body
     const {name, salary, approved} = req.body

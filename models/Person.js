@@ -5,5 +5,5 @@ const Person = mongoose.model('Person', {
     salary: Number,
     approved: Boolean,
 })
-
+//i
 module.exports = Person

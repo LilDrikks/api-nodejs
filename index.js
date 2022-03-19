@@ -16,7 +16,7 @@ app.use(
 app.use(express.json())
 //importando rotas do router express
 const personRoutes = require('./routes/personRoutes')
-app.use('/', personRoutes)
+app.use('/person', personRoutes)
 
 //rota inicial / endpoint
 app.get('/', (req,res) =>{
