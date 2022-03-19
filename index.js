@@ -29,10 +29,11 @@ const dbUser = process.env.DB_USER
 const dbPass = process.env.DB_PASS
 
 //entregar uma porta 
+const port = process.env.PORT || 3333
 mongoose
     .connect(`mongodb+srv://${dbUser}:${dbPass}@apicuster.swkvs.mongodb.net/bancodaapi?retryWrites=true&w=majority`)
     .then(() => {
-        app.listen(3333)
+        app.listen(port)
         console.log('conectado ao mongo')
     })
     .catch((err) => console.log(err))
